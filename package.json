@@ -2,11 +2,14 @@
   "name": "daily-diet-api",
   "version": "1.0.0",
   "description": "",
+  "engines": {"node": ">=18"},
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "lint": "eslint ./ --ext .ts",
-    "lint:fix": "eslint ./ --ext .ts --fix"
+    "lint:fix": "eslint ./ --ext .ts --fix",
+    "knex": "node --no-warnings --loader tsx ./node_modules/knex/bin/cli.js"
   },
   "keywords": [],
   "author": "",
