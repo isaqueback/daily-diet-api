@@ -9,7 +9,7 @@ export async function up(knex: Knex): Promise<void> {
       .notNullable()
       .onDelete('CASCADE')
     table.text('name').notNullable()
-    table.text('description').notNullable()
+    table.text('description')
     table.boolean('in_diet').notNullable()
     table.timestamp('consumed_at').defaultTo(knex.fn.now())
     table.timestamp('created_at').defaultTo(knex.fn.now())

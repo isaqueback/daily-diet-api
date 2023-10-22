@@ -3,6 +3,7 @@ import { Knex } from 'knex'
 
 interface Meal {
   id: string
+  user_id: string
   name: string
   description: string
   in_diet: boolean
@@ -19,7 +20,6 @@ declare module 'knex/types/tables' {
       name: string
       created_at: string
       updated_at: string
-      meals: Meal[]
     }
     meals: Meal
   }
